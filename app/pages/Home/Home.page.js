@@ -19,7 +19,7 @@ class HomePage extends Component {
   }
   componentDidMount () {
     const {updateRSS} = this.props;
-    rssParser.parseURL('http://www.atulr.com/blog-atul/feed.xml', function (err, parsed) {
+    rssParser.parseURL('http://atulr.com/blog-atul/feed.xml', function (err, parsed) {
       if (!err) {
         updateRSS(parsed);
       } else {
