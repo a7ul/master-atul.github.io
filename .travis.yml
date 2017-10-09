@@ -15,6 +15,3 @@ before_install:
   - npm install -g yarn
 
 script: bash ./scripts/build.sh
-env:
-  global:
-  - ENCRYPTION_LABEL: "9290ac03541c"

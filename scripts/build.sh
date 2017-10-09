@@ -47,6 +47,7 @@ git checkout $SOURCE_BRANCH
 updateProjects
 
 cp -rf bundle ../portfolio_dist
+cp CNAME /tmp/CNAME
 
 git stash
 git clean -fd
@@ -60,6 +61,7 @@ echo "copying new dist"
 cp -rf ../portfolio_dist/* .
 echo "current directory ${pwd}"
 ls ../portfolio_dist
+cp /tmp/CNAME CNAME
 
 git add -A .
 git commit -m "Commit new bundle to ${TARGET_BRANCH}"
