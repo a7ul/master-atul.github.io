@@ -48,6 +48,7 @@ updateProjects
 
 cp -rf bundle ../portfolio_dist
 cp CNAME /tmp/CNAME
+cp README /tmp/README
 
 git stash
 git clean -fd
@@ -62,9 +63,10 @@ cp -rf ../portfolio_dist/* .
 echo "current directory ${pwd}"
 ls ../portfolio_dist
 cp /tmp/CNAME CNAME
+cp /tmp/README README
 
 git add -A .
+set +e
 git commit -m "Commit new bundle to ${TARGET_BRANCH}"
-
-
+set -e
 git push $SSH_REPO $TARGET_BRANCH
