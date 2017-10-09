@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e # Exit with nonzero exit code if anything fails
 
-SOURCE_BRANCH="feature/revamp"
-TARGET_BRANCH="test"
+SOURCE_BRANCH="source"
+TARGET_BRANCH="master"
 
 function updateProjects {
   yarn install &&
