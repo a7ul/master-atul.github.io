@@ -18,7 +18,7 @@ class Dashboard extends Component {
             <img style={styles.dp} src='http://gravatar.com/avatar/2587bdb445fa0d21638afcbf59a36e1d?s=150' />
           </div>
           <Links />
-          <div style={styles.selfUpdating}>This portfolio updates itself (<a href='#' style={styles.selfbloglink}>Blog link</a>)</div>
+          <div style={styles.selfUpdating}>This portfolio updates itself (<a href='http://www.atulr.com/blog-atul/web/2017/10/10/self-updating-portfolio.html' style={styles.selfbloglink}>Blog link</a>)</div>
         </div>
       </div>
     );
