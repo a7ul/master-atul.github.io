@@ -35,6 +35,4 @@ class Home extends Component {
   }
 }
 
-// <ProjectTile name='ImShow-Java-OpenCV' imgUrl={null} topics={['yo', 'java', 'opencv']} url='http://google.com' forkCount={3} starCount={4} description='an alternative to imshow() in C++ OpenCV for Java OpenCV' />
-
 export default Home;
