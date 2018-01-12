@@ -18,14 +18,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
       - run: yarn install
       - save_cache:
           paths:
             - node_modules
-        key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: node ./scripts/projects_updater.js ${GITHUB_API_V4_READ_TOKEN}
       - run: yarn build
       - run: cp -rf bundle /tmp/portfolio_dist
