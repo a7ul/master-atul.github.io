@@ -37,7 +37,7 @@ jobs:
       - run: cp CNAME /tmp/CNAME
       - run: cp README /tmp/README
       - run: git clean -fd && git reset --hard
-      - run: git checkout master && git pull origin master
+      - run: git checkout origin/master && git branch -D master && git branch master
       - run: rm -rf * && cp -rf /tmp/portfolio_dist/* .
       - run: cp /tmp/CNAME CNAME && cp /tmp/README README
       - run: git add -A .
