@@ -16,7 +16,7 @@ http://atulr.com/blog-atul/web/2017/10/09/self-updating-portfolio.html
 Update: Moved to Circle CI
 
 The deployment now happens via CircleCI.
-Please ``.circleci/config.yml` for more details.
+Please `.circleci/config.yml` for more details.
 
 I can even check the deployment via a local command
 `circleci build -e GITHUB_API_V4_READ_TOKEN="<SOME TOKEN>"`
