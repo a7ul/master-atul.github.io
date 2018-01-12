@@ -21,7 +21,7 @@ jobs:
           fingerprints:
             - "3b:f7:e5:6d:6f:9a:a1:4a:3b:dd:30:04:a8:57:54:00"
       - run: cd .. && git clone https://github.com/master-atul/master-atul.github.io repo && cd repo
-      - run: git checkout source 
+      - run: git checkout source
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
@@ -36,11 +36,11 @@ jobs:
       - run: yarn build
       - run: cp -rf bundle /tmp/portfolio_dist
       - run: cp CNAME /tmp/CNAME
-      - run: cp README /tmp/README
+      - run: cp README.md /tmp/README.md
       - run: git clean -fd && git reset --hard
       - run: git checkout master
       - run: rm -rf * && cp -rf /tmp/portfolio_dist/* .
-      - run: cp /tmp/CNAME CNAME && cp /tmp/README README
+      - run: cp /tmp/CNAME CNAME && cp /tmp/README.md README.md
       - run: git add -A .
       - run: git commit -m "Commit new bundle to master"
       - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
