@@ -8,9 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
-
     working_directory: ~/repo
-
     steps:
       - run: git config --global user.email atulanand94@gmail.com
       - run: git config --global user.name Atul R
@@ -57,6 +55,3 @@ workflows:
   work_push:
     jobs:
       - build
-          filters:
-            branches:
-              only: source
