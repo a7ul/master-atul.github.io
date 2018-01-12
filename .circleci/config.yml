@@ -1,0 +1,40 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
+    branches:
+      only:
+        - source
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
+      - run: node ./scripts/projects_updater.js ${GITHUB_API_V4_READ_TOKEN}
+      - run: yarn build
+      - run: cp -rf bundle /tmp/portfolio_dist
+      - run: cp CNAME /tmp/CNAME
+      - run: cp README /tmp/README
+      - run: git clean -fd && git reset --hard
+      - run: git checkout master
+      - run: rm -rf * && cp -rf /tmp/portfolio_dist/* .
+      - run: cp /tmp/CNAME CNAME && cp /tmp/README README
+      - run: git add -A .
+      - run: git commit -m "Commit new bundle to master"
+      - run: git push git@github.com:master-atul/master-atul.github.io.git master
