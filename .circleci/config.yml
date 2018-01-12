@@ -20,7 +20,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "3b:f7:e5:6d:6f:9a:a1:4a:3b:dd:30:04:a8:57:54:00"
-      - run: ssh -oStrictHostKeyChecking=no github.com uptime
+      - run: ssh -oStrictHostKeyChecking=no git@github.com uptime
       - run: cd .. && git clone  repo && cd repo
       - restore_cache:
           keys:
