@@ -21,6 +21,7 @@ jobs:
           fingerprints:
             - "3b:f7:e5:6d:6f:9a:a1:4a:3b:dd:30:04:a8:57:54:00"
       - run: cd .. && git clone https://github.com/master-atul/master-atul.github.io repo && cd repo
+      - run: git checkout source 
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
