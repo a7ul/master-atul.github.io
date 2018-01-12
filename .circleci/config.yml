@@ -20,7 +20,8 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "3b:f7:e5:6d:6f:9a:a1:4a:3b:dd:30:04:a8:57:54:00"
-      - run: cd .. && git clone git@github.com:master-atul/master-atul.github.io.git repo && cd repo
+      - run: ssh -oStrictHostKeyChecking=no github.com uptime
+      - run: cd .. && git clone  repo && cd repo
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
@@ -42,4 +43,4 @@ jobs:
       - run: cp /tmp/CNAME CNAME && cp /tmp/README README
       - run: git add -A .
       - run: git commit -m "Commit new bundle to master"
-      - run: git push origin master
+      - run: git push git@github.com:master-atul/master-atul.github.io.git master
