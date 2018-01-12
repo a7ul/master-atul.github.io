@@ -8,10 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
-    branches:
-      only:
-        - source
-
+      
     working_directory: ~/repo
 
     steps:
@@ -60,3 +57,6 @@ workflows:
   work_push:
     jobs:
       - build
+          filters:
+              branches:
+                only: source
