@@ -13,7 +13,7 @@ export default {
     display: 'flex',
     flexDirection: 'column',
     minHeight: 150,
-    borderRadius: 5,
+    // borderRadius: 5,
     background: 'white',
     boxShadow: '0px 1px 2px 0 rgba(0,0,0,0.2)',
     overflow: 'hidden'
@@ -64,16 +64,14 @@ export default {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '5px 10px',
-    background: 'rgba(0,0,0,0.6)',
-    color: 'white'
+    padding: '5px 10px'
   },
   starIcon: {
     fill: theme.tileYellow,
     size: 14
   },
   forkIcon: {
-    fill: theme.tileBlue,
+    fill: 'rgb(15, 153, 177)',
     size: 14
   },
   iconGroup: {
