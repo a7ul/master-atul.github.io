@@ -22,7 +22,7 @@ class Projects extends Component {
         <Logo onPress={goToHome}/>
         <div style={styles.titleContainer}>
           <Icon {...styles.icon} name={iconName} />
-          <div style={styles.title}>{title}</div>
+          <div style={styles.title}>{title} ({projects.length})</div>
         </div>
         <div style={styles.description}>{description}</div>
         <div style={styles.projectContainer}>

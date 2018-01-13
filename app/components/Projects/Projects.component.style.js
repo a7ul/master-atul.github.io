@@ -31,6 +31,6 @@ export default {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-evenly'
+    justifyContent: 'center'
   }
 };

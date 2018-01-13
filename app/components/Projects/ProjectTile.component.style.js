@@ -12,8 +12,7 @@ export default {
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: 150,
-    // borderRadius: 5,
+    minHeight: 170,
     background: 'white',
     boxShadow: '0px 1px 2px 0 rgba(0,0,0,0.2)',
     overflow: 'hidden'
@@ -23,7 +22,7 @@ export default {
     flexDirection: 'column',
     flex: 1,
     justifyContent: 'space-between',
-    padding: '10px 10px 5px 10px'
+    padding: '10px'
   },
   name: {
     fontWeight: 'bold',
