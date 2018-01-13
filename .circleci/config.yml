@@ -57,7 +57,7 @@ workflows:
       - build
   work_push:
     jobs:
-      - build:
+      - build
           # filters:
           #   branches:
           #     only: source
