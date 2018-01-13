@@ -4,12 +4,16 @@
 #
 version: 2
 jobs:
-  build:
-    branches:
-      only:
-        - source
+  donothing:
     docker:
-      # specify the version you desire here
+      - image: circleci/node:7.10
+    branches:
+      ignore:
+        - source
+    steps:
+      - run: echo "Doing nothing"
+  build:
+    docker:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
@@ -57,7 +61,7 @@ workflows:
       - build
   work_push:
     jobs:
-      - build
-          # filters:
-          #   branches:
-          #     only: source
+      - build:
+          filters:
+            branches:
+              only: source
