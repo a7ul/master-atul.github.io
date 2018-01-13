@@ -38,7 +38,7 @@ jobs:
       - run: cp /tmp/CNAME CNAME && cp /tmp/README.md README.md
       - run: git add -A .
       - run: git commit -m "Commit new bundle to master"
-      - run: ssh-keyscan github.com > ~/.ssh/known_hosts
+      - run: touch ~/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run: git push git@github.com:master-atul/master-atul.github.io.git master
 workflows:
   version: 2
