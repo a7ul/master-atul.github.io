@@ -19,7 +19,8 @@ class HomePage extends Component {
   }
   componentDidMount () {
     const {updateRSS} = this.props;
-    rssParser.parseURL('http://atulr.com/blog-atul/feed.xml', function (err, parsed) {
+    const PROXY = 'https://cors-anywhere.herokuapp.com/'; // TODO NEED TO CHANGE THIS PROXY
+    rssParser.parseURL(PROXY + 'https://medium.com/feed/@atulanand94', function (err, parsed) {
       if (!err) {
         updateRSS(parsed);
       } else {

@@ -10,8 +10,7 @@ To see how I look, you can visit: http://atulr.com
 
 To see how I was created you can visit the blog by Atul at:
 
-http://atulr.com/blog-atul/web/2017/10/09/self-updating-portfolio.html
-
+https://medium.com/@atulanand94/creating-a-self-updating-portfolio-3a2e23d4f836
 
 Update: Moved to Circle CI
 

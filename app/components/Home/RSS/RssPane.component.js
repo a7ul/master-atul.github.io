@@ -11,6 +11,11 @@ class RssPane extends Component {
     const {entries = []} = feed;
     return entries.slice(0, 2); // only two recent blog posts
   }
+  parseContent = (rawHTMLContent) => {
+    const span = document.createElement('span');
+    span.innerHTML = rawHTMLContent;
+    return span.textContent || span.innerText;        
+  }
   render () {
     const {feed = {}} = this.props;
     return (
@@ -19,7 +24,8 @@ class RssPane extends Component {
         <div style={styles.rssWrapper}>
           {
             this.getLastFewfeedEnteries(feed).map((entry, i) => {
-              const {link, title, isoDate, contentSnippet = '', categories = []} = entry;
+              const {link, title, isoDate, categories = []} = entry;
+              const contentSnippet = this.parseContent(entry['content:encoded']);
               const trimmed = contentSnippet.slice(0, 200) + ' ..... '; // only 200 characters
               return <RssEntry key={i} contentSnippet={trimmed} categories={categories} title={title} link={link} date={isoDate}/>;
             })
