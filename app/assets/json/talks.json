@@ -27,20 +27,20 @@
 ],
 "otherSlides":[
     {
-        "title":"Web Assembly - Why its the best time to be a web developer!",
-        "description":"What is webassembly and why it is so powerful for the web",
-        "link": null,
-        "slides_link":"https://drive.google.com/file/d/13CX4a7_arxf_7b0rxZIQexYqFuAr7NEl/view?ths=true",
-        "videoUrl": null,
-        "imageUrl":"https://raw.githubusercontent.com/carlosbaraza/web-assembly-logo/master/dist/logo/web-assembly-logo.png"
-    },
-    {
         "title":"JS Evolution - Story of Javascript !",
         "description":"The story of Javascript from birth to present",
         "link": null,
         "slides_link":"https://slides.com/atulr/babel/#/",
         "videoUrl": null,
         "imageUrl":"https://pbs.twimg.com/profile_images/664497474652930048/nkmN4bAC_400x400.png"
+    },
+    {
+        "title":"Web Assembly - Why its the best time to be a web developer!",
+        "description":"What is webassembly and why it is so powerful for the web",
+        "link": null,
+        "slides_link":"https://drive.google.com/file/d/13CX4a7_arxf_7b0rxZIQexYqFuAr7NEl/view?usp=sharing",
+        "videoUrl": null,
+        "imageUrl":"https://raw.githubusercontent.com/carlosbaraza/web-assembly-logo/master/dist/logo/web-assembly-logo.png"
     }
  ]
 }
