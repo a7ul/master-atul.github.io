@@ -28,13 +28,13 @@ class Talks extends Component {
         <div style={styles.talkTitle}>Conference Talks</div>
         <div style={styles.talkContainer}>
           {
-            talks.map((eachTalk, i) => (<TalkItem key={i} {...eachTalk}/>))
+            talks.map((eachTalk, i) => (<TalkItem key={i} {...eachTalk} isMobileView={isMobileView}/>))
           }  
         </div>
         <div style={styles.talkTitle}>Other Talks</div>
         <div style={styles.talkContainer}>
           {
-            otherSlides.map((eachTalk, i) => (<TalkItem key={i} {...eachTalk}/>))
+            otherSlides.map((eachTalk, i) => (<TalkItem key={i} {...eachTalk} isMobileView={isMobileView} />))
           }  
         </div>
       </div>

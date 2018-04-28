@@ -19,23 +19,23 @@ export default {
     fontWeight: 300,
     fontSize: '2em',
     paddingTop: 10,
-    paddingRight: 10
+    paddingRight: 10,
+    textAlign: 'center'
   },
   description: {
     fontStyle: 'italic',
     padding: 10,
-    textAlign: 'center',
     fontWeight: 300
   },
   talkTitle: {
-    fontSize: '1.1em',
+    fontSize: '1.3em',
     fontWeight: 'bold',
+    textDecoration: 'underline',
     padding: '20px',
     color: theme.tileGreen,
   },
   talkContainer: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center'
+    flexDirection: 'column'
   }
 };
