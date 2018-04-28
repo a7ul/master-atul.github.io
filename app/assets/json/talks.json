@@ -1,0 +1,39 @@
+{
+    "talks":[
+    {
+        "title": "React Native Workshop - ReactFoo Conf 2017",
+        "description": "The Workshop focused on how to build native iOS and android app using React Native such that it can easily be extended to any platform",
+        "slides_link": "https://slides.com/atulr/react-native/#/",
+        "link": "https://reactfoo.in/2017-react-native-workshop/",
+        "imageUrl": "https://raw.githubusercontent.com/canokay/canokay.github.io/fbc181a0fe7a7a43e60324d3a2b4176317f2c131/img/react-native-logo.png"
+    },
+    {
+        "title": "Web and VR - Flash Talk - JS Channel 2016",
+        "description": "Building VR applications for the web using AFrame",
+        "slides_link": "https://medium.com/@atulanand94/when-vr-and-web-come-together-web-vr-and-aframe-5d871506042e",
+        "link": "",
+        "imageUrl": "https://user-images.githubusercontent.com/674727/32120889-230ef110-bb0f-11e7-908c-76e39aa43149.jpg"
+    },
+    {
+        "title": "NodeBot - Flash Talk - JS Channel 2015",
+        "description": "A robot that walks around, takes pictures and posts them on twitter. All of this done only using NodeJS",
+        "slides_link": "http://www.tothenew.com/blog/jschannel-conference-2015-summarizing-the-thoughts/",
+        "link": "https://twitter.com/jsnodebot",
+        "imageUrl": "http://static1.tothenew.com/blog/wp-content/uploads/2015/07/bot.jpg"
+    }
+],
+"otherSlides":[
+    {
+        "title":"Web Assembly - Why its the best time to be a web developer!",
+        "description":"What is webassembly and why it is so powerful for the web",
+        "link":"https://drive.google.com/file/d/13CX4a7_arxf_7b0rxZIQexYqFuAr7NEl/view?ths=true",
+        "imageUrl":"https://raw.githubusercontent.com/carlosbaraza/web-assembly-logo/master/dist/logo/web-assembly-logo.png"
+    },
+    {
+        "title":"JS Evolution - Story of Javascript !",
+        "description":"The story of Javascript from birth to present",
+        "link":"https://slides.com/atulr/babel/#/",
+        "imageUrl":"https://pbs.twimg.com/profile_images/664497474652930048/nkmN4bAC_400x400.png"
+    }
+ ]
+}

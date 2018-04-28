@@ -1,5 +1,5 @@
 import React from 'react';
-import createHistory from 'history/createBrowserHistory';
+import createHistory from 'history/createHashHistory';
 import ReactGA from 'react-ga';
 import {Route} from 'react-router';
 import {ConnectedRouter, routerMiddleware, push, goBack} from 'react-router-redux';
@@ -7,6 +7,7 @@ import {ConnectedRouter, routerMiddleware, push, goBack} from 'react-router-redu
 import Home from '../pages/Home/Home.page';
 import Experiments from '../pages/Experiments/Experiments.page';
 import Libraries from '../pages/Libraries/Libraries.page';
+import TalksPage from '../pages/Talks/Talks.page';
 
 const history = createHistory();
 
@@ -23,6 +24,7 @@ const Router = () => (
       <Route exact path='/' component={Home}/>
       <Route path='/experiments' component={Experiments}/>
       <Route path='/libraries' component={Libraries}/>
+      <Route path='/talks' component={TalksPage}/>
     </div>
   </ConnectedRouter>
 );

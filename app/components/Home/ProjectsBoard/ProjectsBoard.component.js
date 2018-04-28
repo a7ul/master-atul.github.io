@@ -4,20 +4,23 @@ import ProjectCategory from './ProjectCategory.component';
 import theme from '../../../style/theme';
 import PropTypes from 'prop-types';
 import {getProjectsBasedOnTag} from '../../../utils/transformer.util';
+import talksList from '../../../assets/json/talks.json';
 
 class ProjectsBoard extends Component {
   static propTypes = {
     goToExperiments: PropTypes.func,
     goToLibraries: PropTypes.func,
+    goToTalks: PropTypes.func,
     isMobileView: PropTypes.bool,
     projectsList: PropTypes.array
   }
 
   render () {
-    const {goToExperiments, goToLibraries, isMobileView, projectsList} = this.props;
+    const {goToExperiments, goToTalks, goToLibraries, isMobileView, projectsList} = this.props;
     const body = isMobileView ? styles.aboutBody : {...styles.aboutBody, padding: '0 25px'};
     const experiments = getProjectsBasedOnTag(projectsList, 'experiment');
     const libraries = getProjectsBasedOnTag(projectsList, 'openlibrary');
+    const talksLength = talksList.talks.length + talksList.otherSlides.length;
     return (
       <div style={styles.container}>
         <div style={styles.about}>
@@ -34,6 +37,7 @@ class ProjectsBoard extends Component {
         </div>
         <div style={styles.row}>
           <ProjectCategory onPress={goToExperiments}  iconName='flask' title='PROJECTS & EXPERIMENTS' count={experiments.length} iconColor={theme.tileRed}/>
+          <ProjectCategory onPress={goToTalks}  iconName='microphone' title='TALKS & WORKSHOPS' count={talksLength} iconColor={theme.linkedInBlue}/>
           <ProjectCategory  onPress={goToLibraries}  iconName='code' title='OPEN SOURCED LIBRARIES' count={libraries.length} iconColor={theme.tileGreen}/>
         </div>
       </div>

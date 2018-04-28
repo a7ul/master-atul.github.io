@@ -15,6 +15,7 @@ class HomePage extends Component {
     isMobileView: PropTypes.bool,
     goToExperiments: PropTypes.func,
     goToLibraries: PropTypes.func,
+    goToTalks: PropTypes.func,
     goToHome: PropTypes.func
   }
   componentDidMount () {
@@ -29,9 +30,11 @@ class HomePage extends Component {
     });
   }
   render () {
-    const {rss, isMobileView, goToHome, goToExperiments, goToLibraries} = this.props;
+    const {rss, isMobileView, goToHome, goToTalks, goToExperiments, goToLibraries} = this.props;
     return (
-      <HomeView rss={rss} goToHome={goToHome} projectsList={projectsList} goToExperiments={goToExperiments} goToLibraries={goToLibraries} isMobileView={isMobileView}/>
+      <HomeView rss={rss} 
+        goToHome={goToHome} projectsList={projectsList} goToExperiments={goToExperiments} goToTalks={goToTalks} 
+        goToLibraries={goToLibraries} isMobileView={isMobileView}/>
     );
   }
 }
@@ -45,6 +48,7 @@ const mapDispatchToProps = (dispatch) => ({
   updateRSS: (rssParsed) => dispatch(updateRSSFeed(rssParsed)),
   goToExperiments: () => dispatch(routerActions.push('experiments')),
   goToLibraries: () => dispatch(routerActions.push('libraries')),
+  goToTalks: () => dispatch(routerActions.push('talks')),
   goToHome: () => dispatch(routerActions.push('/'))
 });
 
