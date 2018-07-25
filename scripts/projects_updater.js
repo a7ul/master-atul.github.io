@@ -105,7 +105,7 @@ const _getAllProjects = (repositoryType) => {
 Promise.all(
   [
     _getAllProjects('repositories').then((data) => _writeJSON('projects.json', JSON.stringify(data))),
-    _getAllProjects('contributedRepositories').then((data) => _writeJSON('contributions.json', JSON.stringify(data)))
+    // _getAllProjects('contributedRepositories').then((data) => _writeJSON('contributions.json', JSON.stringify(data)))
   ]
 ).then((filepaths) => console.log('updated files', filepaths)).catch((err) => {
   console.log(err);
